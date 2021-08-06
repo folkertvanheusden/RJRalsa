@@ -6,7 +6,7 @@ RJRalsa
 installation
 ------------
 This program requires the mido module:
-    apt install python3-mido
+    apt install python3-mido python3-rtmidi
 
 
 usage
