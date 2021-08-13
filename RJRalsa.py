@@ -110,11 +110,12 @@ def port_handler(rtmidi, port):
             state['file'] = start_file(port)
             print(f"{time.ctime()}] Started recording to {state['file'][1]}")
 
-        item[0].time = t_to_tick(item[1], state['latest_msg'])
-        print(item)
-        state['file'][0].append(item[0])
+        if item[0].is_realtime == False:
+            item[0].time = t_to_tick(item[1], state['latest_msg'])
+            print(item)
+            state['file'][0].append(item[0])
 
-        state['latest_msg'] = item[1]
+            state['latest_msg'] = item[1]
 
     input_.close()
 
