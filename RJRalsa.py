@@ -137,7 +137,7 @@ while True:
         print(item)
         state['file'][0].append(item[0])
 
-    state['latest_msg'] = item[1]
+        state['latest_msg'] = item[1]
 
 input_.close()
 
